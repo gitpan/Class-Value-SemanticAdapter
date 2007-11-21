@@ -1,0 +1,19 @@
+---
+global:
+  name: Class-Value-SemanticAdapter
+releases:
+  - author: 'Marcel Gruenauer <marcel@cpan.org>'
+    changes:
+      - original version
+      - 'Makefile.PL: removed unnecessary requirements'
+      - deleted Class::Value::SemanticAdapter::Test (that functionality now lives in Data::Semantic::Test
+      - updated MANIFEST
+      - deleted lib/Class/Value/SemanticAdapter
+      - deleted lib/Class/Value/SemanticAdapter/Test.pm
+      - deleted t/01_misc.t
+      - getting rid of the distinction between well-formedness and validity. Only validity remains
+      - added documentation
+      - updated t/perlcriticrc
+    date: 2007-11-21T18:21:30Z
+    tags: []
+    version: 0.01
