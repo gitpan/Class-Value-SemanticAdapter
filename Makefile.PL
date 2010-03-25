@@ -1,24 +1,46 @@
-use inc::Module::Install;
-include 'Module::AutoInstall';
 
-name 'Class-Value-SemanticAdapter';
-all_from 'lib/Class/Value/SemanticAdapter.pm';
-perl_version '5.006';
+use strict;
+use warnings;
 
-requires 'Class::Value';
-requires 'Data::Semantic';
-requires 'UNIVERSAL::require';
+ BEGIN { require 5.008; } 
 
-build_requires 'Test::More' => '0.70';
+use ExtUtils::MakeMaker 6.11;
 
-process_templates(
-    first_year => 2007,
-    rest_from  => "$ENV{HOME}/.mitlib/standard_pod",
-    start_tag  => '{%',
-    end_tag    => '%}',
-);
 
-use_standard_tests(without => 'pod_coverage');
-auto_install;
-auto_include;
-WriteAll;
+
+my %WriteMakefileArgs = (
+                       'test' => {
+                                   'TESTS' => 't/*.t'
+                                 },
+                       'NAME' => 'Class::Value::SemanticAdapter',
+                       'DISTNAME' => 'Class-Value-SemanticAdapter',
+                       'CONFIGURE_REQUIRES' => {
+                                                 'ExtUtils::MakeMaker' => '6.11'
+                                               },
+                       'AUTHOR' => 'Marcel Gruenauer <marcel@cpan.org>',
+                       'BUILD_REQUIRES' => {},
+                       'ABSTRACT' => 'Adapter for Data::Semantic objects',
+                       'EXE_FILES' => [],
+                       'VERSION' => '1.100840',
+                       'PREREQ_PM' => {
+                                        'Test::More' => '0.88',
+                                        'Scalar::Util' => '0',
+                                        'parent' => '0',
+                                        'English' => '0',
+                                        'File::Find' => '0',
+                                        'File::Temp' => '0',
+                                        'Class::Value' => '0',
+                                        'UNIVERSAL::require' => '0',
+                                        'Carp' => '0'
+                                      },
+                       'LICENSE' => 'perl'
+                     );
+
+
+delete $WriteMakefileArgs{LICENSE}
+  unless eval { ExtUtils::MakeMaker->VERSION(6.31) };
+
+WriteMakefile(%WriteMakefileArgs);
+
+
+
