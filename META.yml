@@ -14,7 +14,7 @@ name: Class-Value-SemanticAdapter
 provides:
   Class::Value::SemanticAdapter:
     file: lib/Class/Value/SemanticAdapter.pm
-    version: 1.100840
+    version: 1.100841
 requires:
   Carp: 0
   Class::Value: 0
@@ -30,4 +30,4 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Class-Value-SemanticAdapter
   homepage: http://search.cpan.org/dist/Class-Value-SemanticAdapter/
   repository: http://github.com/hanekomu/Class-Value-SemanticAdapter
-version: 1.100840
+version: 1.100841

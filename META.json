@@ -9,7 +9,7 @@
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "version" : "1.100840",
+   "version" : "1.100841",
    "name" : "Class-Value-SemanticAdapter",
    "author" : [
       "Marcel Gruenauer <marcel@cpan.org>"
@@ -18,7 +18,7 @@
    "build_requires" : {},
    "provides" : {
       "Class::Value::SemanticAdapter" : {
-         "version" : "1.100840",
+         "version" : "1.100841",
          "file" : "lib/Class/Value/SemanticAdapter.pm"
       }
    },

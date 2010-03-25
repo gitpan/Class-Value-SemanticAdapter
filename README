@@ -2,14 +2,14 @@ NAME
     Class::Value::SemanticAdapter - Adapter for Data::Semantic objects
 
 VERSION
-    version 1.100840
+    version 1.100841
 
 DESCRIPTION
     This class is an adapter, a wrapper, that turns Data::Semantic objects
     into Class::Value objects.
 
 METHODS
-  "semantic_class_name"
+  semantic_class_name
     Returns the corresponding semantic class name. This method provides a
     default mapping, the idea of which is to mirror the layout of the
     Data::Semantic class tree. If you have a different mapping, override
@@ -18,44 +18,26 @@ METHODS
     So in the Class::Value::URI::http class, it will return
     "Data::Semantic::URI::http".
 
-  "adaptee"
+  adaptee
     Takes the results of "semantic_class_name()" and "semantic_args()",
     loads the semantic data class and returns a semantic data object with
     the given args passed to its constructor.
 
-  "semantic_args"
+  semantic_args
     Return those of the value object's attributes, in hash format, that are
     relevant to the semantic data object constructor.
 
-  "is_valid_value"
-    Like the same method in Class::Value, but forwards the question to the
-    adapted data semantic object.
-
-  "normalize_value"
-    Like the same method in Class::Value, but forwards the question to the
-    adapted data semantic object.
-
-  "is_valid_normalized_value"
-    Like the same method in Class::Value, but forwards the question to the
-    adapted data semantic object.
-
-  adaptee
-    FIXME
-
-  is_valid_normalized_value
-    FIXME
-
   is_valid_value
-    FIXME
+    Like the same method in Class::Value, but forwards the question to the
+    adapted data semantic object.
 
   normalize_value
-    FIXME
+    Like the same method in Class::Value, but forwards the question to the
+    adapted data semantic object.
 
-  semantic_args
-    FIXME
-
-  semantic_class_name
-    FIXME
+  is_valid_normalized_value
+    Like the same method in Class::Value, but forwards the question to the
+    adapted data semantic object.
 
 INSTALLATION
     See perlmodinstall for information and options on installing Perl

@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 package Class::Value::SemanticAdapter;
-our $VERSION = '1.100840';
+our $VERSION = '1.100841';
 # ABSTRACT: Adapter for Data::Semantic objects
 use UNIVERSAL::require;
 use parent qw(Class::Value);
@@ -55,7 +55,7 @@ Class::Value::SemanticAdapter - Adapter for Data::Semantic objects
 
 =head1 VERSION
 
-version 1.100840
+version 1.100841
 
 =head1 DESCRIPTION
 
@@ -64,7 +64,7 @@ L<Class::Value> objects.
 
 =head1 METHODS
 
-=head2 C<semantic_class_name>
+=head2 semantic_class_name
 
 Returns the corresponding semantic class name. This method provides a default
 mapping, the idea of which is to mirror the layout of the Data::Semantic class
@@ -73,55 +73,31 @@ tree. If you have a different mapping, override this method in a subclass.
 So in the Class::Value::URI::http class, it will return
 C<Data::Semantic::URI::http>.
 
-=head2 C<adaptee>
+=head2 adaptee
 
 Takes the results of C<semantic_class_name()> and C<semantic_args()>, loads
 the semantic data class and returns a semantic data object with the given args
 passed to its constructor.
 
-=head2 C<semantic_args>
+=head2 semantic_args
 
 Return those of the value object's attributes, in hash format, that are
 relevant to the semantic data object constructor.
 
-=head2 C<is_valid_value>
-
-Like the same method in L<Class::Value>, but forwards the question to the
-adapted data semantic object.
-
-=head2 C<normalize_value>
-
-Like the same method in L<Class::Value>, but forwards the question to the
-adapted data semantic object.
-
-=head2 C<is_valid_normalized_value>
-
-Like the same method in L<Class::Value>, but forwards the question to the
-adapted data semantic object.
-
-=head2 adaptee
-
-FIXME
-
-=head2 is_valid_normalized_value
-
-FIXME
-
 =head2 is_valid_value
 
-FIXME
+Like the same method in L<Class::Value>, but forwards the question to the
+adapted data semantic object.
 
 =head2 normalize_value
 
-FIXME
+Like the same method in L<Class::Value>, but forwards the question to the
+adapted data semantic object.
 
-=head2 semantic_args
+=head2 is_valid_normalized_value
 
-FIXME
-
-=head2 semantic_class_name
-
-FIXME
+Like the same method in L<Class::Value>, but forwards the question to the
+adapted data semantic object.
 
 =head1 INSTALLATION
 
